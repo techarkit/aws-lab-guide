@@ -3,7 +3,7 @@ Amazon Web Services Practice Lab Guide. Absolute beginners can try this lab prac
 
 Topics Covered in this Lab Guide are below
 
-Table of Contents | Page Number
+** Table of Contents | Page Number **
 1.	About Author	4
 2.	Services we provide to our customers	5
 3.	Cloud Computing Models	6
