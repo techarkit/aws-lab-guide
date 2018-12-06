@@ -3,13 +3,13 @@ Amazon Web Services Practice Lab Guide. Absolute beginners can try this lab prac
 
 Topics Covered in this Lab Guide are below
 
-Table of Contents
+Table of Contents | Page Number
 1.	About Author	4
 2.	Services we provide to our customers	5
 3.	Cloud Computing Models	6
-3.1.	Infrastructure as a Service (IaaS):	6
-3.2.	Platform as a Service (PaaS):	6
-3.3.	Software as a Service (SaaS):	6
+  - Infrastructure as a Service (IaaS):	6
+  - Platform as a Service (PaaS):	6
+  - Software as a Service (SaaS):	6
 4.	Amazon Free Tier Account Creation	7
 5.	Enabling Multi-Factor Authentication to Secure Your Access	11
 6.	Creating First Linux Instance	15
@@ -18,14 +18,14 @@ Table of Contents
 9.	Launching RDS Instance	25
 10.	Accessing MySQL Instance Using Workbench	33
 11.	AWS S3 Bucket	38
-11.1.	AWS S3 Lifecycle Management	40
-11.2.	S3 Bucket Replication to Cross-Region	43
-11.3.	S3 Bucket Policies to control Access	45
+  - AWS S3 Lifecycle Management	40
+  - S3 Bucket Replication to Cross-Region	43
+  - S3 Bucket Policies to control Access	45
 12.	VPC – Virtual Private Cloud (isolated Network)	46
-12.1.	Create subnets	48
-12.2.	Create Internet gateway and attach to VPC	49
-12.3.	Create Virtual Private Gateway and Attach to VPC	50
-12.4.	Create route tables and attach to subnets	51
+  - Create subnets	48
+  - Create Internet gateway and attach to VPC	49
+  - Create Virtual Private Gateway and Attach to VPC	50
+  - Create route tables and attach to subnets	51
 13.	AWS Elastic Load Balancer (ELB)	53
 
 
