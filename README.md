@@ -16,46 +16,47 @@ Topics Covered in this Lab Guide are below
 
 **Table of Contents | Page Number**
 Table of Contents
-1.- About Author- 5
-2.- Services we provide to our customers- 6
-3.- Cloud Computing Models- 7
-3.1.- Infrastructure as a Service (IaaS):- 7
-3.2.- Platform as a Service (PaaS):- 7
-3.3.- Software as a Service (SaaS):- 7
-4.- Amazon Free Tier Account Creation- 8
-5.- Enabling Multi-Factor Authentication to Secure Your Access- 12
-6.- Creating First Linux Instance- 16
-7.- Adding New EBS Volume to Linux Instance- 22
-8.- Creating Amazon Machine Image (AMI)- 25
-9.- Create your First EC2 windows instance- 27
-10.- Assigning Elastic IP Addresses to Instance (Static IP Address)- 31
-11.- Amazon Elastic File System- 32
-12.- Launching RDS Instance- 34
-13.- Accessing MySQL Instance Using Workbench- 43
-14.- AWS S3 Bucket – (Object Storage)- 48
-14.1.- AWS S3 Lifecycle Management- 50
-14.2.- S3 Bucket Replication to Cross-Region- 53
-14.3.- S3 Bucket Policies to control Access- 54
-15.- VPC – Virtual Private Cloud (isolated Network)- 55
-15.1.- Create subnets- 58
-15.2.- Create Internet gateway and attach to VPC- 59
-15.3.- Create Virtual Private Gateway and Attach to VPC- 59
-15.4.- Create route tables and attach to subnets- 60
-16.- AWS Elastic Load Balancer (ELB)- 63
-17.- AWS CloudTrail – Enable Governance and Auditing- 67
-17.1.- How to Create CloudTrail- 67
-18.- Athena Analytics- 68
-19.- Auto Scaling- 70
-19.1.- Launch configuration- 70
-19.2.- Auto Scaling Groups- 71
-20.- ClodFormation- 74
-21.- Amazon FSx- 75
-22.- SQS – Simple Queue Service- 77
-23.- SNS – Simple Notification Service- 79
-24.- AWS CLI- 82
-25.- Creating EC2 Instance using AWS CLI- 85
-26.- Few AWS Articles- 85
-27.- AWS Services and abbreviations- 85
+- About Author
+- Services we provide to our customers
+- Cloud Computing Models
+- Infrastructure as a Service (IaaS) 
+- Platform as a Service (PaaS)
+- Software as a Service (SaaS) 
+- Amazon Free Tier Account Creation
+- Enabling Multi-Factor Authentication to Secure Your Access
+- Creating First Linux Instance
+- Adding New EBS Volume to Linux Instance
+- Creating Amazon Machine Image (AMI)
+- Create your First EC windows instance
+- Assigning Elastic IP Addresses to Instance (Static IP Address)
+- Amazon Elastic File System
+- Launching RDS Instance
+- Accessing MySQL Instance Using Workbench
+- AWS S Bucket – (Object Storage)
+- AWS S Lifecycle Management 
+- S Bucket Replication to Cross-Region
+- S Bucket Policies to control Access
+- VPC – Virtual Private Cloud (isolated Network)
+- Create subnets
+- Create Internet gateway and attach to VPC
+- Create Virtual Private Gateway and Attach to VPC
+- Create route tables and attach to subnets
+- AWS Elastic Load Balancer (ELB)
+- AWS CloudTrail – Enable Governance and Auditing
+- How to Create CloudTrail
+- Athena Analytics
+- Auto Scaling
+- Launch configuration
+- Auto Scaling Groups
+- ClodFormation
+- Amazon FSx
+- SQS – Simple Queue Service
+- SNS – Simple Notification Service
+- AWS CLI
+- Creating EC Instance using AWS CLI
+- Few AWS Articles
+- AWS Services and abbreviations
+
 
 [Download Guide](https://github.com/techtutorials/aws-lab-guide/blob/aws/AWS%20lab%20practice%20guide%20by%20www.server-computer.com_v1.pdf)
 
