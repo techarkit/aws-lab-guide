@@ -1,4 +1,4 @@
-# aws-lab-guide
+# AWS Lab Practice Guide for Beginners
 Amazon Web Services Practice Lab Guide. Absolute beginners can try this lab practice guide.
 
 Follow us on Social Networking Sites
