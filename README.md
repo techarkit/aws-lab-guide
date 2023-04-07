@@ -6,14 +6,13 @@ Follow us on Social Networking Sites
 * [Facebook](https://www.facebook.com/Linuxarkit/)
 * [Email List](https://feedburner.google.com/fb/a/mailverify?uri=arkit)
 * [Linkedin](https://in.linkedin.com/in/ravi-kumar-94530121)
-* [Google Plus](https://plus.google.com/u/0/+RedhatEnterpriseLinuxStepbyStepGuide/posts)
 * [Twitter](https://twitter.com/aravikumar48)
 * [Youtube](https://www.youtube.com/Techarkit?sub_confirmation=1)
 * [Email Address](aravikumar48@gmail.com)
 * [WhatsApp Group](https://bit.ly/TechArkitWhatsAppGroup)
 * [Join Telegram Group](http://t.me/linuxarkit)
 * [GitHub](https://github.com/techarkit/)
-* [FB Private Group 5K members] (https://www.facebook.com/groups/techarkit)
+* [FB Private Group 5K members](https://www.facebook.com/groups/techarkit)
 * [Facebook](https://www.facebook.com/techarkit)
 * [Twitter](https://twitter.com/tech_arkit)
 * [Instagram](https://www.instagram.com/arkit.co.in/)
@@ -27,12 +26,15 @@ Follow us on Social Networking Sites
 
 # AWS Cloud Practitioner Certification
 
+## Foundations of Cloud Computing
 * [AWS Certified Cloud Practitioner](https://youtu.be/4ETQg2f8634)
 * [The Cloud](https://youtu.be/bQAcFQCn7VU)
 * [6 Advantages of Cloud](https://youtu.be/rFyj25mFgxU)
 * [Cloud Deployment Models](https://youtu.be/onG3V7XYF8Q}
 * [AWS Global Infrastructure](https://youtu.be/397h1WPZcnc)
 * [AWS Free Tier Account](https://youtu.be/JW4VcI05Fjo)
+
+## Technology
 * [AWS Cloud Compute](https://youtu.be/3pO2ynVXrPI)
 * [AWS Lambda Function-as-a-service](https://youtu.be/YNoUycUSYpk)
 * [AWS Fargate](https://youtu.be/1zECwaOJlqw)
