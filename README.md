@@ -30,7 +30,7 @@ Follow us on Social Networking Sites
 * [AWS Certified Cloud Practitioner](https://youtu.be/4ETQg2f8634)
 * [The Cloud](https://youtu.be/bQAcFQCn7VU)
 * [6 Advantages of Cloud](https://youtu.be/rFyj25mFgxU)
-* [Cloud Deployment Models](https://youtu.be/onG3V7XYF8Q}
+* [Cloud Deployment Models](https://youtu.be/onG3V7XYF8Q)
 * [AWS Global Infrastructure](https://youtu.be/397h1WPZcnc)
 * [AWS Free Tier Account](https://youtu.be/JW4VcI05Fjo)
 
