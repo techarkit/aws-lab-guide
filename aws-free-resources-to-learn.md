@@ -1,4 +1,4 @@
-23 Best Linux tutorials to help you get started with AWS Cloud Practitioner.
+23 Best tutorials to help you get started with AWS Cloud Practitioner.
 
 The AWS Certified Cloud Practitioner (CLF-C01) Complete Course Playlist
 https://www.youtube.com/playlist?list=PL8cE5Nxf6M6Z60VqxyjQ3pSesK2yCQYWg
