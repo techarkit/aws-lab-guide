@@ -5,8 +5,8 @@
 	a. Create Load Balancer Security Groups (LBSG) Attach to Load Balancer
 		a1. Allow Port 80
 	b. Create Web Server Security Group (WEBSG) attach to EC2 instances
-		b1. Allow Port 80 - http portocol access
-		b2. Allow Port 22 - SSH to access EC2 instances
+		b1. Allow Port 80 - http portocol access Custom Allow LBSG 
+		b2. Allow Port 22 - SSH to access EC2 instances Allow Any-Where-IPv4
 	c. Create EFS Security Group (EFSSG) to allow 2049(NFS) protocol
 		c1. Allow 2049 Port and allow WEBSG group as custom to accessed by EC2 instances
 ### 3. Create EFS Share and copy the attach command ###
