@@ -1,6 +1,6 @@
 ## Commands to Prepare EC2 Instance ##
 
-sudo apt-get update -y
+```sudo apt-get update -y
 sudo apt-get install apache2 -y
 sudo systemctl enable apache2
 sudo systemctl start apache2
@@ -20,10 +20,10 @@ Query OK, 0 rows affected (0.02 sec)
 mysql> quit;
 
 cd /var/www/html
-sudo vim /var/www/html/index.php
+sudo vim /var/www/html/index.php```
 
 ## Line Number 29 ##
-$firstname=$_POST['firstname'];
+```$firstname=$_POST['firstname'];
 $email=$_POST['email'];
 $servername = "ENDPOINT_URL";
 $username = "admin";
@@ -31,11 +31,11 @@ $password = "PASSWORD_HERE";
 $db = "intel";
 // Create connection
 
-:wq!
+:wq!```
 
 ## To Verify the Data is inserted ##
 
-sudo mysql -h <EndPoint> -u admin -p
+```sudo mysql -h <EndPoint> -u admin -p
 mysql> use intel;
 mysql> show tables;
-mysql> select * from data;
+mysql> select * from data;```
