@@ -1,7 +1,6 @@
 
 # Visit below sites for more content & tutorial
-https://server-computer.com 
-https://arkit.co.in
+[MyBlog](https://arkit.co.in)
 
 ## Stop EC2 Instnace
 aws ec2 stop-instances --instance-id <INSTANCE-ID> --output json
