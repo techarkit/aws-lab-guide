@@ -1,0 +1,192 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Resources": {
+    "MyVPC": {
+      "Type": "AWS::EC2::VPC",
+      "Properties": {
+        "CidrBlock": "10.0.0.0/16",
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "MyVPC"
+          }
+        ]
+      }
+    },
+    "InternetGateway": {
+      "Type": "AWS::EC2::InternetGateway",
+      "Properties": {
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "MyInternetGateway"
+          }
+        ]
+      }
+    },
+    "VPCGatewayAttachment": {
+      "Type": "AWS::EC2::VPCGatewayAttachment",
+      "Properties": {
+        "VpcId": {
+          "Ref": "MyVPC"
+        },
+        "InternetGatewayId": {
+          "Ref": "InternetGateway"
+        }
+      }
+    },
+    "PublicSubnet": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "VpcId": {
+          "Ref": "MyVPC"
+        },
+        "CidrBlock": "10.0.0.0/24",
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "PublicSubnet"
+          }
+        ]
+      }
+    },
+    "PrivateSubnet": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "VpcId": {
+          "Ref": "MyVPC"
+        },
+        "CidrBlock": "10.0.1.0/24",
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "PrivateSubnet"
+          }
+        ]
+      }
+    },
+    "WebSecurityGroup": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "Security group for the Web tier",
+        "SecurityGroupIngress": [
+          {
+            "IpProtocol": "tcp",
+            "FromPort": 80,
+            "ToPort": 80,
+            "CidrIp": "0.0.0.0/0"
+          },
+          {
+            "IpProtocol": "tcp",
+            "FromPort": 22,
+            "ToPort": 22,
+            "CidrIp": "0.0.0.0/0"
+          }
+        ],
+        "VpcId": {
+          "Ref": "MyVPC"
+        }
+      }
+    },
+    "AppSecurityGroup": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "Security group for the Application tier",
+        "SecurityGroupIngress": [
+          {
+            "IpProtocol": "tcp",
+            "FromPort": 22,
+            "ToPort": 22,
+            "SourceSecurityGroupId": {
+              "Ref": "WebSecurityGroup"
+            }
+          }
+        ],
+        "VpcId": {
+          "Ref": "MyVPC"
+        }
+      }
+    },
+    "DbSecurityGroup": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "Security group for the DB tier",
+        "SecurityGroupIngress": [
+          {
+            "IpProtocol": "tcp",
+            "FromPort": 3306,
+            "ToPort": 3306,
+            "SourceSecurityGroupId": {
+              "Ref": "WebSecurityGroup"
+            }
+          },
+          {
+            "IpProtocol": "tcp",
+            "FromPort": 3306,
+            "ToPort": 3306,
+            "SourceSecurityGroupId": {
+              "Ref": "AppSecurityGroup"
+            }
+          }
+        ],
+        "VpcId": {
+          "Ref": "MyVPC"
+        }
+      }
+    },
+    "WebInstance": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+        "KeyName": "Mykey",
+        "ImageId": "your_ami_id",
+        "InstanceType": "t2.micro",
+        "SecurityGroupIds": [
+          {
+            "Ref": "WebSecurityGroup"
+          }
+        ],
+        "SubnetId": {
+          "Ref": "PublicSubnet"
+        }
+      }
+    },
+    "AppInstance": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+        "KeyName": "Mykey",
+        "ImageId": "your_ami_id",
+        "InstanceType": "t2.micro",
+        "SecurityGroupIds": [
+          {
+            "Ref": "AppSecurityGroup"
+          }
+        ],
+        "SubnetId": {
+          "Ref": "PrivateSubnet"
+        }
+      }
+    },
+    "DBInstance": {
+      "Type": "AWS::RDS::DBInstance",
+      "Properties": {
+        "DBSubnetGroupName": "your_dbsg_subnet_group_name",
+        "AllocatedStorage": "20",
+        "DBInstanceClass": "db.t2.micro",
+        "Engine": "mysql",
+        "EngineVersion": "5.7",
+        "MasterUsername": "master",
+        "MasterUserPassword": "YourPassword",
+        "MultiAZ": "false"
+      }
+    },
+    "Route53HostedZone": {
+      "Type": "AWS::Route53::HostedZone",
+      "Properties": {
+        "Name": "your_domain_name",
+        "HostedZoneConfig": {
+          "Comment": "Your comment here"
+        }
+      }
+    }
+  }
+}
