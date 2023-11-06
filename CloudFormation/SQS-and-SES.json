@@ -1,0 +1,106 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Resources": {
+    "MyFifoQueue": {
+      "Type": "AWS::SQS::Queue",
+      "Properties": {
+        "QueueName": "MyFifoQueue.fifo",
+        "FifoQueue": true
+      }
+    },
+    "EmailIdentity": {
+      "Type": "AWS::SES::Identity",
+      "Properties": {
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "EMAILADDRESS"
+          }
+        ]
+      }
+    },
+    "EmailVerification": {
+      "Type": "AWS::SES::EmailIdentity",
+      "Properties": {
+        "EmailAddress": "EMAILADDRESS"
+      }
+    },
+    "EmailVerificationPolicy": {
+      "Type": "AWS::SES::ReceiptFilter",
+      "Properties": {
+        "Filter": {
+          "IpFilter": {
+            "Cidr": "0.0.0.0/0"
+          },
+          "Name": "MyEmailFilter"
+        }
+      }
+    },
+    "EmailTemplate": {
+      "Type": "AWS::SES::Template",
+      "Properties": {
+        "Template": {
+          "TemplateName": "MyTemplate",
+          "SubjectPart": "Test email subject",
+          "TextPart": "Test email body"
+        }
+      }
+    },
+    "EmailConfigurationSet": {
+      "Type": "AWS::SES::ConfigurationSet",
+      "Properties": {
+        "Name": "MyConfigurationSet"
+      }
+    },
+    "EmailConfigurationSetEventDestination": {
+      "Type": "AWS::SES::ConfigurationSetEventDestination",
+      "Properties": {
+        "ConfigurationSetName": "MyConfigurationSet",
+        "EventDestination": {
+          "Name": "MyEventDestination",
+          "MatchingEventTypes": ["send"],
+          "KinesisFirehoseDestination": {
+            "DeliveryStreamARN": "arn:aws:kinesis:us-east-1:123456789012:stream/my-stream-name"
+          }
+        }
+      }
+    },
+    "EmailSendingAuthorizationPolicy": {
+      "Type": "AWS::SES::IdentityPolicy",
+      "Properties": {
+        "Identity": {
+          "Ref": "EmailIdentity"
+        },
+        "Policy": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Action": "ses:SendEmail",
+              "Resource": "*"
+            }
+          ]
+        }
+      }
+    },
+    "EmailSendingTest": {
+      "Type": "AWS::SES::Email",
+      "Properties": {
+        "Destination": {
+          "ToAddresses": ["EMAILADDRESS"]
+        },
+        "Message": {
+          "Body": {
+            "Text": {
+              "Data": "Test email message body"
+            }
+          },
+          "Subject": {
+            "Data": "Test email subject"
+          }
+        },
+        "Source": "EMAILADDRESS"
+      }
+    }
+  }
+}
