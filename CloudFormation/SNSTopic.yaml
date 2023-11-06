@@ -1,0 +1,8 @@
+Resources:
+  SNSTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: "Ravi-SNS-Topic"
+      Subscription:
+        - Endpoint: "aravikumar48@gmail.com"
+          Protocol: email
